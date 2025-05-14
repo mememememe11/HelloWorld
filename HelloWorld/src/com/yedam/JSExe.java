@@ -8,9 +8,11 @@ public class JSExe {
 		for(int i=1; i<=5; i++) {
 	int result = (int)(Math.random()* 10) + 1; // 0 <= x < 1
 		sum += result;
+		}
 		System.out.println("결과: " +sum);
-	}	// end of main
+		// end of main
 	}
+	
 	public static void test() {
 	int sum = 0;
 	// 1 ~ 10 까지의 누적
@@ -20,8 +22,5 @@ public class JSExe {
 		}			
 	}
 	
-	
-	
-		// end of test
-}	
-}	
+	}
+}		// end of test
