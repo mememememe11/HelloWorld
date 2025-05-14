@@ -4,6 +4,7 @@ public class JSExe {
 	public static void main(String[] args) {
 		//변경된 부분
 		//ㅠ
+		//66666
 		//개어렵
 		//ㅈ45ㅈ4ㄷ6ㅅㄷ46ㅅ
 		//임의의 수를 생성.1 ~ 100사이의 임의의 값 생성
