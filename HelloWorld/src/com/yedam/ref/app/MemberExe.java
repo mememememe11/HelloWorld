@@ -49,7 +49,7 @@ public class MemberExe {
 				}
 
 
-				member m1 = new member();
+//				member m1 = new member();
 				
 				
 				
@@ -119,5 +119,5 @@ public class MemberExe {
 		
 		}
 			
-		memAry = new member[] { m1, m2, m3 };
+//		memAry = new member[] { m1, m2, m3 };
 } // MemberExe class end
