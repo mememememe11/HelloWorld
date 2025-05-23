@@ -8,7 +8,7 @@ import java.util.Date;
 public class CalendarExe {
 	public static void main(String[] args) {
 
-		
+		cal();
 		
 //		System.out.println("        2025년 05월 ");
 //		System.out.println("=============================");
@@ -22,11 +22,12 @@ public class CalendarExe {
 //		System.out.println("-----------------------------");	
 //		makeCalendar(2025, 5);
 		
-		import java.util.Calendar;
+		
 
-		public class CalendarExample {
+		class CalendarExample {
 		    public static void main(String[] args) {
 		        printCalendar(2025, 5); // 2025년 5월 달력 출력
+		        
 		    }
 
 		    public static void printCalendar(int year, int month) {
