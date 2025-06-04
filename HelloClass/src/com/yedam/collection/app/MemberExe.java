@@ -6,36 +6,15 @@ import java.util.List;
 import java.util.Scanner;
 
 /*
- *  배열활용해서 저장 -> 컬렉션(ArrayList)를 활용해서 저장
- *  2025.05.23 
- * 
- * 
+ * 배열활용해서 저장 -> 컬렉션(ArrayList)를 활용해서 저장.
+ * 2025.05.23 
  */
-
-
-
-
-/*
- * 회원 추가,수정,삭제,조회 기능.
- * 1)추가
- *   - 아이디,이름,전화번호,포인트
- * 2)수정
- *   - 아이디 
- *   - 전화번호 (바뀔항목)
- * 3)삭제
- *   - 아이디
- * 4)조회
- *   - 이름 (조회)
- */
-
 public class MemberExe {
 	public static void main(String[] args) {
 		boolean run = true; // 반복문 실행/종료
 //		Member[] members = new Member[10]; // 저장공간으로 배열을 선언.
 		List<Member> members = new ArrayList<>();
-		
-		
-		
+
 		Scanner scn = new Scanner(System.in);
 		while (run) {
 			System.out.println("--------------------------------------------");
@@ -57,22 +36,16 @@ public class MemberExe {
 				int point = Integer.parseInt(scn.nextLine());
 				// 멤버변수 선언과 값 할당.
 				Member member = new Member(id, name, telNo, point);
-			//	member.memberId = id;
-			//	member.setMemberId(id);
-			//	member.memberName = name;
-			//	member.setMemberName;
-			//	member.phone = telNo;
-			//	memebr.setPhone
-			//	member.point = point;
+//				member.setMemberId(id);
+//				member.setMemberName(name);
+//				member.setPhone(telNo);
+//				member.setPoint(point);
 
-				// 배열에 추가.
-				for (int i = 0; i < members.length; i++) {
-					if (members[i] == null) {
-						members[i] = member;
-						System.out.println("등록완료.");
-						break; // 한건을 추가했으면 반복문 종료.
-					}
+				// arraylist에 추가.
+				if (members.add(member)) {
+					System.out.println("등록성공");
 				}
+
 				break; // switch의 case 1 종료.
 
 			case 2: // 수정.
@@ -82,12 +55,11 @@ public class MemberExe {
 				telNo = scn.nextLine();
 
 				// 같은 값을 찾아서 변경하기.
-				for (int i = 0; i < members.length; i++) {
-					if (members[i] != null) {
-						if (members[i].getMemberId().equals(id)) {
-							members[i].setPhone(telNo);
-							System.out.println("수정완료.");
-						}
+				for (int i = 0; i < members.size(); i++) {
+					// members[i]
+					if (members.get(i).getMemberId().equals(id)) {
+						members.get(i).setPhone(telNo);
+						System.out.println("수정완료.");
 					}
 				}
 				break;
@@ -97,29 +69,26 @@ public class MemberExe {
 				id = scn.nextLine();
 
 				// 같은 값을 찾아서 삭제하기.
-				for (int i = 0; i < members.length; i++) {
-					if (members[i] != null) {
-						if (members[i].getMemberId().equals(id)) {
-							members[i] = null;
-							System.out.println("삭제완료.");
-						}
+				for (int i = 0; i < members.size(); i++) {
+					if (members.get(i).getMemberId().equals(id)) {
+						members.remove(i);
+						System.out.println("삭제완료.");
 					}
 				}
 				break;
-					
+
 			case 4: // 조회.
 				System.out.print("이름를 입력>> ");
 				name = scn.nextLine();
 
 				// 조회.
 				System.out.printf("%-10s %-5s %-15s\n", "UserId", "회원명", "TelNo");
-				for (int i = 0; i < members.length; i++) {
-					if (members[i] != null && (name.equals("") ||
-							name.equals(members[i].getMemberName()))) {
-						System.out.printf("%-10s %-5s %-15s\n",
-								members[i].getMemberId(),
-								members[i].getMemberName(),
-								members[i].getPhone());
+				for (int i = 0; i < members.size(); i++) {
+					if (name.equals("") || name.equals(members.get(i).getMemberName())) {
+						System.out.printf("%-10s %-5s %-15s\n"//
+								, members.get(i).getMemberId()//
+								, members.get(i).getMemberName()//
+								, members.get(i).getPhone());
 					}
 				}
 				break;

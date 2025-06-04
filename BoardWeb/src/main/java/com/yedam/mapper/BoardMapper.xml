@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yedam.mapper.BoardMapper">  <!--  수입때 통일 하기로 함 / 현재 BlogMapper위치 입력 -->
+  <!-- 조회(selectBoard) -->
+  <select id="selectList" resultType="Board">
+   select * from tbl_board
+    <!--  select board_no as boardNo from tbl_board  -->
+  </select>
+   <!-- 등록(insertBoard) -->
+   <insert id="insertBoard" parameterType="Board">
+   insert into tbl_board (board_no, title, content, writer)
+   values(board_seq.nextval, #{title}, #{content}, #{writer})
+  </insert>
+  
+  <!-- 수정(updateBoard) -->
+  <update id="updateBoard" parameterType="Board">
+  update tbl_board
+  <set>
+  <if test="title != null">
+      title = #{title},
+  </if>
+  <if test="content != null">
+      content = #{content},
+  </if>
+  <if test="writer != null">
+      writer = #{writer}
+  </if>
+  </set>  <!-- set 쓰면 적절히 콤마 구분해줌? -->
+  where  board_no = #{boardNo}
+  </update>
+  
+  <!-- 삭제(deleteBoard) -->
+  <delete id="deleteBoard" parameterType="Board">
+  delete from tbl_board
+  </delete>
+</mapper>

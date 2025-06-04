@@ -36,18 +36,12 @@ public class ArrayExe {
 					if (name.equals("quit"));{
 						
 					}
-					
-					
+									
 					System.out.println("추가됌");
-						
-					
-						
-					//배열에 추가
-				
-					
-					
+			
+					//배열에 추가			
 				case 2: // 목록
-					
+				
 				friendAry[0]="홍길동";
 				friendAry[1]="김친구";
 				friendAry[2]="김태완";
