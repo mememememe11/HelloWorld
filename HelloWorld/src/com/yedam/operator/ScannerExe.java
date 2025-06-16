@@ -3,7 +3,8 @@ package com.yedam.operator;
 import java.util.Scanner;
 
 public class ScannerExe {
-	public static void main(String[] args) { 
+
+	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		int balance = 0; // 계좌의 금액.
 		// 조건추가..10만원을 초과(X), 마이너스금액(x)
@@ -47,52 +48,5 @@ public class ScannerExe {
 		} // end of while.
 		System.out.println("end of prog.");
 	} // end of main.
-	
-//			else if(value == 2) {
-//				System.out.println("출금액을 입력>>");
-//			} else if(value == 3) {
-//				System.out.println("잔액 확인");
-//			} else if(value == 4) {
-//				System.out.println("프로그램을 종료합니다");
-//				break;
-//			} else {
-//				System.out.println("1~4번중에 선택하세요");
-//			}
-		// end of while
-						//System.out.println("end of prog"); 
-	 // end of main
-		
-		
-		
-//		while(true) {
-//			System.out.println("1.메뉴 2.메뉴 3.메뉴 4.종료");
-//			int menu =Integer.parseInt(scn.nextLine()); //integer.parseInt("30");
-//			if(menu == 1) {
-//				System.out.println("1번 메뉴를 선택했습니다");
-//			} else if(menu == 2) {
-//				System.out.println("2번 메뉴를 선택했습니다");
-//			} else if(menu == 3) {
-//				System.out.println("3번 메뉴를 선택했습니다");
-//			} else if(menu == 4) {
-//				System.out.println("프로그램을 종료합니다");
-//				break;
-//			} else {
-//				System.out.println("1~4번중에 선택하세요");
-//			}
-		 // end of while
-						//System.out.println("end of prog"); 
-	 // end of main
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

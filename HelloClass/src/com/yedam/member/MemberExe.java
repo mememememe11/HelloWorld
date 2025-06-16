@@ -1,20 +1,6 @@
-
 package com.yedam.member;
 
 import java.util.Scanner;
-
-/*
- * 회원 추가,수정,삭제,조회 기능.
- * 1)추가
- *   - 아이디,이름,전화번호,포인트
- * 2)수정
- *   - 아이디 
- *   - 전화번호 (바뀔항목)
- * 3)삭제
- *   - 아이디
- * 4)조회
- *   - 이름 (조회)
- */
 
 public class MemberExe {
 	public static void main(String[] args) {
@@ -42,13 +28,10 @@ public class MemberExe {
 				int point = Integer.parseInt(scn.nextLine());
 				// 멤버변수 선언과 값 할당.
 				Member member = new Member(id, name, telNo, point);
-			//	member.memberId = id;
-			//	member.setMemberId(id);
-			//	member.memberName = name;
-			//	member.setMemberName;
-			//	member.phone = telNo;
-			//	memebr.setPhone
-			//	member.point = point;
+//				member.setMemberId(id);
+//				member.setMemberName(name);
+//				member.setPhone(telNo);
+//				member.setPoint(point);
 
 				// 배열에 추가.
 				for (int i = 0; i < members.length; i++) {
@@ -99,12 +82,12 @@ public class MemberExe {
 				// 조회.
 				System.out.printf("%-10s %-5s %-15s\n", "UserId", "회원명", "TelNo");
 				for (int i = 0; i < members.length; i++) {
-					if (members[i] != null && (name.equals("") ||
-							name.equals(members[i].getMemberName()))) {
-						System.out.printf("%-10s %-5s %-15s\n",
-								members[i].getMemberId(),
-								members[i].getMemberName(),
-								members[i].getPhone());
+					if (members[i] != null //
+							&& (name.equals("") || name.equals(members[i].getMemberName()))) {
+						System.out.printf("%-10s %-5s %-15s\n"//
+								, members[i].getMemberId()//
+								, members[i].getMemberName()//
+								, members[i].getPhone());
 					}
 				}
 				break;

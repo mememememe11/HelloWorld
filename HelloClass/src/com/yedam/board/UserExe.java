@@ -1,4 +1,3 @@
-
 package com.yedam.board;
 
 /*
@@ -27,7 +26,7 @@ class User {
 
 	public String getUserName() {
 		return userName;
-	} 
+	}
 }
 
 public class UserExe {

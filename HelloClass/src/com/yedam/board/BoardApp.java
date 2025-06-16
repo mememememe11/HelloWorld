@@ -1,7 +1,5 @@
 package com.yedam.board;
 
-import com.yedam.Student;
-
 /*
  * 게시판.
  * Board: 글번호, 제목, 내용, 작성자.
@@ -14,9 +12,3 @@ public class BoardApp {
 		exe.execute();
 	}
 }
-	
-	
-	
-	
-	
-

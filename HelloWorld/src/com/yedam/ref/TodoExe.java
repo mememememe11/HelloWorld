@@ -9,7 +9,7 @@ public class TodoExe {
 	static Student[] scores = null; // 학생점수저장.
 
 	public static void main(String[] args) {
-		init(); // 초기데이터 생성
+		init(); // 초기데이터 생성.
 
 		boolean run = true; // 반복문 실행/종료
 		int studentNum = 0; // 학생수
@@ -39,19 +39,16 @@ public class TodoExe {
 					String name = scanner.nextLine(); // 이름저장.
 					System.out.printf("scores[%d] 점수>> ", i);
 					int score = Integer.parseInt(scanner.nextLine());
-//							Double.parseDouble("175.6"); 문자를 실수타입으로 변환.
+//					Double.parseDouble("175.6"); 문자를 실수타입으로 변환.
 					System.out.printf("scores[%d] 키>> ", i);
 					double height = Double.parseDouble(scanner.nextLine());
 					System.out.printf("scores[%d] 성별>> ", i);
 					String gender = scanner.nextLine(); // 성별저장.
 					Gender gen = Gender.MALE;
-					if (gender.equals("남") || gender.equals("남자")
-					||gender.equals("Men") || gender.equals("M")){
-								gen = Gender.MALE;
-					}	else if (gender.equals("여") || gender.equals("여자")
-				     	|| gender.equals("Women")  || gender.equals("W")) {
-
-								gen = Gender.FEMALE;
+					if (gender.equals("남") || gender.equals("남자")) {
+						gen = Gender.MALE;
+					} else if (gender.equals("여") || gender.equals("여자")) {
+						gen = Gender.FEMALE;
 					}
 
 					// 인스턴스 생성.
@@ -59,7 +56,7 @@ public class TodoExe {
 					student.studentName = name;
 					student.score = score;
 					student.height = height;
-//							student.gender = gender;
+					student.gender = gen;
 
 					scores[i] = student; // 배열에 저장.
 				}
@@ -77,11 +74,12 @@ public class TodoExe {
 				}
 				System.out.print("검색조건 ex)남 또는 여 >> ");
 				String keyword = scanner.nextLine(); // "남", "여", "엔터"
-				Gender gen = Gender.MALE; // 초기화
-				if (keyword.equals("남") || keyword.equals("남자") || keyword.equals("Men") || keyword.equals("M")) {
+				Gender gen = Gender.MALE; // 초기화.
+				if (keyword.equals("남") || keyword.equals("남자") //
+						|| keyword.equals("Men") || keyword.equals("M")) {
 					gen = Gender.MALE;
-				} else if (keyword.equals("여") || keyword.equals("여자") || keyword.equals("Women")
-						|| keyword.equals("W")) {
+				} else if (keyword.equals("여") || keyword.equals("여자")//
+						|| keyword.equals("Women") || keyword.equals("W")) {
 					gen = Gender.FEMALE;
 				}
 				// "이름, 점수" 출력.
@@ -117,38 +115,29 @@ public class TodoExe {
 			}
 		}
 		System.out.println("프로그램 종료");
-	}
+	} // end of main.
 
 	public static void init() {
-		Student s1 = new Student(); // 인스턴스 생성
+		Student s1 = new Student(); // 인스턴스 생성.
 		s1.studentName = "홍길동";
 		s1.score = 80;
 		s1.height = 170.8;
 		s1.gender = Gender.MALE; // "남자", "Men",
 
-		Student s2 = new Student(); // 인스턴스 생성
+		Student s2 = new Student(); // 인스턴스 생성.
 		s2.studentName = "김민선";
 		s2.score = 85;
-		s2.height = 165.4; // 
+		s2.height = 165.7;
 		s2.gender = Gender.FEMALE;
 
-		Student s3 = new Student(); // 인스턴스 생성
+		Student s3 = new Student(); // 인스턴스 생성.
 		s3.studentName = "박철민";
 		s3.score = 90;
 		s3.height = 180.3;
 		s3.gender = Gender.MALE;
-		
-		Student student = new Student();
-//		student.studentName = name;
-//		student.score = score;
-//		student.height = height;
-		
-			
-		// 초기데이터 배열에 저장
+
+		// 초기데이터.
 		scores = new Student[] { s1, s2, s3 };
-		
+
 	}
 }
-
-
-

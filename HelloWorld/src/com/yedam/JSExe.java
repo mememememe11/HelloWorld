@@ -1,4 +1,3 @@
-
 package com.yedam;
 
 import java.util.Scanner;

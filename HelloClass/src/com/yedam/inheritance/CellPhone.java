@@ -1,4 +1,3 @@
-
 package com.yedam.inheritance;
 /*
  * 부모: CellPhone
