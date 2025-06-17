@@ -15,7 +15,7 @@ public class AppTest {
 		SqlSession sqlSession = DataSource.getInstance().openSession();
 		BoardMapper mapper = sqlSession.getMapper(BoardMapper.class);
 		
-		List<Map> list = mapper.selectUserByCount();
+		List<Map> list = mapper.selectUserByCount();dsfsdfdsf
 		
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String json = gson.toJson(list);
